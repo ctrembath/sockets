@@ -4,9 +4,15 @@ var socket = function(io){
 
     console.log('Client connected!');
 
-    // socket.on('message', function(data){
-    //   conosole.log(data);
-    // });
+    socket.broadcast.emit('Welcome', {message: 'Hi'});
+      socket.on('Hi from client!', function(message){
+        console.log(message);
+    });
+    
+
+    socket.on('disconnect', function(){
+      console.log('theyve gone! :(');
+    });
   });
 };
 

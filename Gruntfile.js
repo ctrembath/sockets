@@ -19,8 +19,8 @@ module.exports = function(grunt) {
     },
    watch: {
       files: ['server.js', 'Gruntfile.js','package.json', 'socket.ejs', 'socketController.js'],
-      tasks: ['jshint']
-    }
+      tasks: 'jshint'
+    },
   });
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-watch');
